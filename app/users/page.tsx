@@ -1,4 +1,6 @@
 import React from "react"
+import getData from "../sql/db"
+import {RowDataPacket} from "mysql2"
 
 interface User {
     id: number
@@ -6,8 +8,7 @@ interface User {
 }
 
 async function users() {
-    const res = await fetch("https://jsonplaceholder.typicode.com/users")
-    const users: User[] = await res.json()
+    const users: RowDataPacket[] = await getData()
     return (
         <>
             <h1>Users</h1>
