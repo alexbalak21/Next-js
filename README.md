@@ -1,2 +1,2 @@
-# bext-js app 
+# next-js app 
 Next JS training 
